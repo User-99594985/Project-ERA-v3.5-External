@@ -169,10 +169,9 @@ boolean in_rect(double centerX, double centerY, double radius, double x, double 
 
 Vector3 BoneArray(uintptr_t mesh, int id)
 {
-	__int64 rdi, rdx, rcx;
-	rdi = mesh;
-	rdx = Drv.read<int>(rdi + 0x6D0);
-	rcx = Drv.read<__int64>(rdi + 0x688 + (rdx * 0x10));
+	__int64 rdx, rcx;
+	rdx = Drv.read<int>(mesh + 0x6D0);
+	rcx = Drv.read<__int64>(mesh + 0x688 + (rdx * 0x10));
 	FTransform bone = Drv.read<FTransform>(rcx + (0x30 * id));
 	FTransform ComponentToWorld = Drv.read<FTransform>(mesh + 0x180);
 
