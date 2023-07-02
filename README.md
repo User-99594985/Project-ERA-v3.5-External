@@ -1,2 +1,2 @@
 # Project-ERA-v3.5-External
-Fortnite External made for EraFN v3.5
+Fortnite External made for Project EraFN v3.5
